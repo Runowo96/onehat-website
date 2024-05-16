@@ -57,6 +57,37 @@ function NavBar() {
           </NavLink>
         </article>
       )}
+              <article className="navbar__menu-items--desktop">
+          <NavLink
+            to="/"
+            className="navbar__menu-item"
+            onClick={handleNavLinkClick}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/hats"
+            className="navbar__menu-item"
+            onClick={handleNavLinkClick}
+          >
+            Hats
+          </NavLink>
+          <NavLink
+            to="/patches"
+            className="navbar__menu-item"
+            onClick={handleNavLinkClick}
+          >
+            Patches
+          </NavLink>
+          <NavLink
+            to="/about/us"
+            className="navbar__menu-item"
+            onClick={handleNavLinkClick}
+          >
+            About Us
+          </NavLink>
+        </article>
+
       <NavLink to="/" className="navbar__logo" onClick={handleNavLinkClick}>
         <img className="navbar__logo" src={logo} alt="ONEHAT logo" />
       </NavLink>
