@@ -1,0 +1,176 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.navbar {
+  height: 10vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  @include tablet {
+    padding: 0 1.5rem;
+  }
+  @include desktop {
+    padding: 1rem 3rem;
+    height: 5vh;
+  }
+  &__menu {
+    height: 50%;
+    &:hover {
+      animation: scale 0.1s ease-in-out forwards;
+      filter: invert(100%);
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+  &__menu-items {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    top: 10vh;
+    left: 0;
+    padding: 1rem;
+    gap: 0.25rem;
+    border-bottom-right-radius: 5px;
+    @include tablet {
+      top: 10vh;
+      left: 0;
+      padding: 1.5rem;
+      gap: 0.5rem;
+      font-size: 1.75rem;
+    }
+    @include desktop {
+      position: relative;
+      // top: 10vh;
+      // left: 0;
+      // padding: 1.5rem;
+      // gap: 0.5rem;
+      // font-size: 1.75rem;
+    }
+    &--desktop{
+      display: none;
+      @include desktop {
+        display: flex;
+        gap: 1rem;
+
+      }
+    
+    }
+  }
+  &__menu-item {
+    text-decoration: none;
+    color: black;
+    &:hover {
+      animation: scale 0.1s ease-in-out forwards;
+    }
+    @include desktop {
+      font-size: 1.5rem;
+    }
+  }
+  &__logo {
+    // height: 2rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    @include desktop {
+      width: 35%;
+    }
+  }
+  &__login-cart {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  &__login-btn {
+    // height: 1rem;
+    // font-size: 0.5rem;
+    font-weight: 600;
+    border: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    &:hover {
+      animation: scale 0.1s ease-in-out forwards;
+      filter: invert(100%);
+    }
+    @include tablet {
+      font-size: 1.5rem;
+      height: 5vw;
+      padding: 0 1rem;
+    }
+    @include desktop{
+      font-size: 1.5rem;
+      height: 2.5vw;
+      padding: 0 1rem;
+    
+    }
+  }
+  &__cart-cont {
+    position: relative;
+    &:hover {
+      animation: scale 0.1s ease-in-out forwards;
+    }
+    @include tablet {
+      height: 5vw;
+    }
+    @include desktop {
+      height: 2.5vw;
+    }
+  }
+  &__cart {
+    height: 100%;
+    @include tablet {
+      height: 100%;
+    }
+  }
+  &__item-count {
+    position: absolute;
+    top: -0.9rem;
+    left: 0.8rem;
+    font-size: 0.75rem;
+    z-index: 1;
+    background-color: red;
+    height: 50%;
+    line-height: 0.95;
+    width: 50%;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 600;
+    @include tablet {
+      top: -2rem;
+      left: 1.5rem;
+      font-size: 1.5rem;
+      height: 50%;
+      width: 50%;
+      line-height: 0.99;
+      padding: 0 2.5px;
+      padding-bottom: 5px;
+    }
+    @include desktop {
+      height: 35%;
+      width: 35%;
+      top: -1.5rem;
+      left: 1.5rem;
+      font-size: 1.25rem;
+     }
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.025);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
