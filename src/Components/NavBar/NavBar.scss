@@ -1,0 +1,133 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.navbar {
+  height: 10vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  &__menu {
+    height: 3rem;
+    &:hover {
+      animation: scale 0.1s ease-in-out forwards;
+      filter: invert(100%);
+    }
+    @include tablet{
+      height: 5rem;
+    }
+
+  }
+  &__menu-items {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    top: 10vh;
+    left: 0;
+    padding: 1rem;
+    gap: .25rem;
+    border-bottom-right-radius: 5px;
+    @include tablet{
+      top: 10vh;
+      left: 0;
+      padding: 1.5rem;
+      gap: .5rem;
+      font-size: 1.75rem;
+    }
+
+  }
+  &__menu-item {
+    text-decoration: none;
+    color: black;
+    &:hover {
+      animation: scale 0.1s ease-in-out forwards;
+    }
+  }
+  &__logo {
+    // height: 2rem;
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 100px; 
+    @include tablet{
+      height: 5rem;
+      width: 9.375rem; 
+
+    }
+    
+  }
+  &__login-cart{
+    display: flex;
+    gap: 1rem;
+
+}
+  &__login-btn {
+    // height: 1rem;
+    // font-size: 0.5rem;
+    font-weight: 600;
+    border: none;
+    border:1px solid black;
+    border-radius: 5px;
+    &:hover {
+      animation: scale 0.1s ease-in-out forwards;
+      filter: invert(100%);
+    }
+    @include tablet{
+      font-size: 1.5rem;
+      height: 50%;
+    }
+
+    }
+    &__cart-cont {
+    position: relative;
+    &:hover {
+      animation: scale 0.1s ease-in-out forwards;
+    }
+  }
+  &__cart {
+    height: 1.5rem;
+    @include tablet{
+      height: 2rem;
+    
+    }
+  }
+  &__item-count {
+    position: absolute;
+    top: -.9rem;
+    left: 0.8rem;
+    font-size: .75rem;
+    z-index: 1;
+    background-color: red;
+    height: .75rem;
+    line-height: .95;
+    width: .75rem;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 600;
+    @include tablet{
+      top: -1.25rem;
+      left: 1.1rem;
+      font-size: 1rem;
+      height: 1rem;
+      width: 1rem;
+      line-height: .99;
+
+    }
+  }
+}
+
+@keyframes scale {
+  0% {
+  transform: scale(1);
+  }
+  50% {
+  transform: scale(1.025);
+  }
+  100% {
+  transform: scale(1.05);
+  }
+}
