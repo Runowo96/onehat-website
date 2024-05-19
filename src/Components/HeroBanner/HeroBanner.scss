@@ -1,0 +1,55 @@
+.hero-banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // background-image: url(../../assets/images/hero-image-center_1200x500.png);
+    // background-position: center;
+    // background-size: 100%;
+    // height: 20vh;
+    // background-repeat: no-repeat;
+    // width: 100vw;
+    padding: 0 1rem;
+    &__image{
+        // width: 100%;
+        // position: relative;
+    }
+    &__text-cont{
+        // background-image: url("../../assets/images/onehat-herobanner.png");
+        // background-position: center;
+        // background-size: cover;
+        // position: absolute;
+        // top: 10%;
+        // left: 1rem;
+        // transform: translate(-50%, -50%);
+        text-align: center;
+        color: rgb(0, 0, 0);
+        // width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        
+
+    }
+
+    &__title{
+        padding-top: 8%;
+  margin: 0;
+    }
+    &__description{
+        width: 45%;
+        font-weight: 600;
+        margin: 0
+        
+    }
+    &__img-cont{
+        width: 100%;
+        position: relative;
+    }
+    &__img{
+        width: 100%;
+        height: 100%;
+    }
+}
