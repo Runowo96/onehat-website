@@ -1,0 +1,65 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.hero-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  gap: 1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  @include tablet {
+    gap: 2rem;
+  }
+  @include desktop {
+flex-direction: row;
+  }
+  &__image {
+  }
+  &__text-cont {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    @include tablet {
+      gap: 2rem;
+    }
+  }
+
+  &__title {
+    padding-top: 8%;
+    margin: 0;
+    text-transform: uppercase;
+
+    @include tablet {
+      font-size: 2.5rem;
+    }@include desktop {
+      font-size: 3.5rem;
+    }
+  }
+  &__description {
+    width: 60%;
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+    @include tablet {
+      font-size: 1.5rem;
+    }
+  @include desktop {
+    font-size: 2rem;
+  }
+
+  }
+  &__img-cont {
+    width: 100%;
+    position: relative;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+}
