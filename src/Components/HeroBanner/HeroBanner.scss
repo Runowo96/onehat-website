@@ -12,6 +12,9 @@
   @include tablet {
     gap: 2rem;
   }
+  @include desktop {
+flex-direction: row;
+  }
   &__image {
   }
   &__text-cont {
@@ -34,6 +37,8 @@
 
     @include tablet {
       font-size: 2.5rem;
+    }@include desktop {
+      font-size: 3.5rem;
     }
   }
   &__description {
@@ -44,6 +49,10 @@
     @include tablet {
       font-size: 1.5rem;
     }
+  @include desktop {
+    font-size: 2rem;
+  }
+
   }
   &__img-cont {
     width: 100%;
